@@ -1,23 +1,36 @@
 /* Defina um estilo para o corpo da página */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #f0f0f0; /* Cor de fundo da página */
     text-align: center; /* Centralize o texto na página */
-    padding: 20px;
+    padding: 10px;
     margin: 0;
 }
 
 /* Estilo para o título (h1) */
 h1 {
     color: #333; /* Cor do título */
+    font-size: 20px; /* Tamanho da fonte do título */
+    margin-top: 2px;
+    margin-bottom: 20px;
+    max-height: 20px;
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0 auto;
+    max-width: 600px;
+    /* Outros estilos de posicionamento e tamanho conforme necessário */
 }
 
 /* Estilo para o formulário */
-form {
+.add_text {
     background-color: #fff; /* Cor de fundo do formulário */
     padding: 20px;
-    border-radius: 10px; /* Cantos arredondados */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
     margin: 0 auto; /* Centralize o formulário horizontalmente */
     max-width: 600px; /* Largura máxima do formulário */
 }
@@ -25,30 +38,81 @@ form {
 /* Estilo para os rótulos (labels) */
 label {
     display: block; /* Coloque os rótulos em uma nova linha */
-    margin-top: 10px; /* Espaço superior entre os rótulos */
-    font-weight: bold;
+    margin-top: 8px; /* Espaço superior entre os rótulos */
+    font-weight: bold; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-size: 12px;
 }
 
 /* Estilo para os campos de entrada (inputs) */
 input[type="text"] {
-    width: 100%; /* Ocupa toda a largura disponível */
-    padding: 10px;
+    width: 90%; /* Ocupa toda a largura disponível */
+    padding: 8px;
     margin: 5px 0;
     border: 1px solid #ccc; /* Borda fina cinza */
     border-radius: 5px;
 }
 
-/* Estilo para o botão */
-input[type="submit"] {
-    background-color: #007bff; /* Cor de fundo do botão */
-    color: #fff; /* Cor do texto do botão */
-    padding: 10px 20px;
+.button_add {
+    background-color: #baed68; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+.button_add:hover {
+    background-color: #a2cd5a; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Estilo para o botão quando hover (passar o mouse por cima) */
-input[type="submit"]:hover {
-    background-color: #0056b3;
+.button_clear {
+    background-color: #baed68; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 10px;
+
 }
+
+.button_clear:hover {
+    background-color: #a2cd5a; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button_save {
+    background-color: #baed68; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button_save:hover {
+    background-color: #a2cd5a; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+img {    
+    border: 2px solid #696969;    
+}
+

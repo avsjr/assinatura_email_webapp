@@ -2,17 +2,20 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Assinaturas</title>
+    <title>Assinaturas de E-mail</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
 </head>
 <body>
-    <h1>Assinaturas</h1>
-
-    <form method="POST" action="/add_text">
-        <select name="option">
-            <option value="Platina CSC">Platina CSC</option>
+    <h1>Crie sua assinatura de e-mail</h1>
+    <div class="container">
+    <form class='add_text' method="POST" action="/add_text">
+        <select id="unitSelect" name="option">
+            <option value="" disabled selected>Escolha sua unidade</option>
+            <option value="Platina">Platina</option>
             <option value="Masterline">Masterline</option>
-        </select><br><br>
+        </select><br><br>    
         <label for="name">Nome:</label>
         <input type="text" name="name"><br>
         <label for="position">Cargo:</label>
@@ -23,18 +26,18 @@
         <input type="text" name="phone"><br>
         <label for="mobile">Telefone Móvel (opcional):</label>
         <input type="text" name="mobile"><br><br>
-        <input type="submit" value="Adicionar">
-    </form>
+        <input class='button_add' type="submit" value="Criar Assinatura">
     
-    <img src="/image" alt="Assinatura" width="400"><br><br>
-    
-    <form method="POST" action="/clear">
-        <input type="submit" value="Limpar Campos">
     </form>
+    <form class='limpar_campos' method="POST" action="/clear">
+        <input class='button_clear' type="submit" value="Limpar Campos">
+    </form>    
+    <img id="signatureImage" src="static/img/03-branco.png" alt="Assinatura" width="590">
     
-    <form method="POST" action="/save_image">
-        <input type="submit" value="Salvar Imagem">
+    <form class='salvar_imagem' method="POST" action="/save_image">
+        <input class='button_save' type="submit" value="Salvar Assinatura">
     </form>
+    </div>
 </body>
 </html>
     

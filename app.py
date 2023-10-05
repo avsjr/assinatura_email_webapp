@@ -6,13 +6,9 @@ import io
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
-# definicao de constantes
-INDEX_PAGE = 'INDEX_PAGE'
-IMG_TEMP = 'temp_image.png'
-
 @app.route('/')
 def index():
-    return render_template('INDEX_PAGE')
+    return render_template('index.html')
 
 @app.route('/add_text', methods=['POST'])
 def add_text():
@@ -28,7 +24,7 @@ def add_text():
     IMG_ML = 'img/01-masterline.png'
     IMG_PL = 'img/02-platina.png'
     opcoes = {
-        'Platina CSC': IMG_PL,
+        'Platina': IMG_PL,
         'Masterline': IMG_ML
     }
     
@@ -69,18 +65,18 @@ def add_text():
     desenho.text(posicao_telefone_movel, texto_telefone_movel, font=fonte_atributos, fill=(3, 3, 3))
     
     # Salvar imagem temporária
-    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'IMG_TEMP')
+    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp_image.png')
     imagem.save(temp_image_path)
     
-    return render_template('INDEX_PAGE', temp_image=temp_image_path)
+    return render_template('index.html', temp_image=temp_image_path)
 
 @app.route('/clear', methods=['POST'])
 def clear():
-    return render_template('INDEX_PAGE')
+    return render_template('index.html')
 
 @app.route('/save_image', methods=['POST'])
 def save_image():
-    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'IMG_TEMP')
+    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp_image.png')
     
     if os.path.exists(temp_image_path):
         # Excluir a imagem temporária após salvá-la
@@ -90,7 +86,7 @@ def save_image():
 
 @app.route('/image')
 def get_image():
-    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'IMG_TEMP')
+    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp_image.png')
     if os.path.exists(temp_image_path):
         return send_file(temp_image_path)
     else:
