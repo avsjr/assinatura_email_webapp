@@ -1,0 +1,54 @@
+/* Defina um estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Cor de fundo da página */
+    text-align: center; /* Centralize o texto na página */
+    padding: 20px;
+    margin: 0;
+}
+
+/* Estilo para o título (h1) */
+h1 {
+    color: #333; /* Cor do título */
+}
+
+/* Estilo para o formulário */
+form {
+    background-color: #fff; /* Cor de fundo do formulário */
+    padding: 20px;
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin: 0 auto; /* Centralize o formulário horizontalmente */
+    max-width: 600px; /* Largura máxima do formulário */
+}
+
+/* Estilo para os rótulos (labels) */
+label {
+    display: block; /* Coloque os rótulos em uma nova linha */
+    margin-top: 10px; /* Espaço superior entre os rótulos */
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada (inputs) */
+input[type="text"] {
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc; /* Borda fina cinza */
+    border-radius: 5px;
+}
+
+/* Estilo para o botão */
+input[type="submit"] {
+    background-color: #007bff; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto do botão */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para o botão quando hover (passar o mouse por cima) */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Assinaturas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Assinaturas</h1>
+
+    <form method="POST" action="/add_text">
+        <select name="option">
+            <option value="Platina CSC">Platina CSC</option>
+            <option value="Masterline">Masterline</option>
+        </select><br><br>
+        <label for="name">Nome:</label>
+        <input type="text" name="name"><br>
+        <label for="position">Cargo:</label>
+        <input type="text" name="position"><br>
+        <label for="email">Email:</label>
+        <input type="text" name="email"><br>
+        <label for="phone">Telefone Fixo:</label>
+        <input type="text" name="phone"><br>
+        <label for="mobile">Telefone Móvel (opcional):</label>
+        <input type="text" name="mobile"><br><br>
+        <input type="submit" value="Adicionar">
+    </form>
+    
+    <img src="/image" alt="Assinatura" width="400"><br><br>
+    
+    <form method="POST" action="/clear">
+        <input type="submit" value="Limpar Campos">
+    </form>
+    
+    <form method="POST" action="/save_image">
+        <input type="submit" value="Salvar Imagem">
+    </form>
+</body>
+</html>
+    
