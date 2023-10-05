@@ -8,8 +8,10 @@
 
 </head>
 <body>
-    <h1>Crie sua assinatura de e-mail</h1>
+        
     <div class="container">
+            <img class='logo_img' src="/static/img/logo-skala.png" alt="Logo">
+            <h1 class='logo_text'>Crie sua Aasinatura de e-mail</h1>
     <form class='add_text' method="POST" action="/add_text">
         <select id="unitSelect" name="option">
             <option value="" disabled selected>Escolha sua unidade</option>
@@ -26,8 +28,7 @@
         <input type="text" name="phone"><br>
         <label for="mobile">Telefone Móvel (opcional):</label>
         <input type="text" name="mobile"><br><br>
-        <input class='button_add' type="submit" value="Criar Assinatura">
-    
+        <input class='button_add' type="submit" value="Criar Assinatura">    
     </form>
     <form class='limpar_campos' method="POST" action="/clear">
         <input class='button_clear' type="submit" value="Limpar Campos">

@@ -7,30 +7,39 @@ body {
     margin: 0;
 }
 
-/* Estilo para o título (h1) */
-h1 {
+
+
+
+.logo_text {
     color: #333; /* Cor do título */
-    font-size: 20px; /* Tamanho da fonte do título */
+    font-size: 15px; /* Tamanho da fonte do título */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 2px;
     margin-bottom: 20px;
     max-height: 20px;
+    text-align: center;
+}
+
+.logo_img {
+    max-width: 130px; /* Defina a largura desejada para a imagem */
+    justify-content: left;
 }
 
 /* Estilos para o contêiner principal */
 .container {
-    background-color: #fff;
+    background-image: url('img/bg-secao01.jpg');
+    /*background-color: #fff;*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
     /* Outros estilos de posicionamento e tamanho conforme necessário */
 }
 
 /* Estilo para o formulário */
 .add_text {
-    background-color: #fff; /* Cor de fundo do formulário */
-    padding: 20px;
+    padding: 10px;
     margin: 0 auto; /* Centralize o formulário horizontalmente */
     max-width: 600px; /* Largura máxima do formulário */
 }
@@ -38,62 +47,23 @@ h1 {
 /* Estilo para os rótulos (labels) */
 label {
     display: block; /* Coloque os rótulos em uma nova linha */
-    margin-top: 8px; /* Espaço superior entre os rótulos */
+    margin-top: 5px; /* Espaço superior entre os rótulos */
     font-weight: bold; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    font-family: Verdana, Tahoma, sans-serif; 
     font-size: 12px;
 }
 
 /* Estilo para os campos de entrada (inputs) */
 input[type="text"] {
     width: 90%; /* Ocupa toda a largura disponível */
-    padding: 8px;
-    margin: 5px 0;
+    padding: 5px;
+    margin: 3px 0;
     border: 1px solid #ccc; /* Borda fina cinza */
     border-radius: 5px;
 }
 
-.button_add {
-    background-color: #baed68; /* Cor de fundo do botão */
-    color: #000; /* Cor do texto do botão */
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 2px;
-    margin-bottom: 10px;
-}
-
-.button_add:hover {
-    background-color: #a2cd5a; /* Cor de fundo do botão */
-    color: #000; /* Cor do texto do botão */
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.button_clear {
-    background-color: #baed68; /* Cor de fundo do botão */
-    color: #000; /* Cor do texto do botão */
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 2px;
-    margin-bottom: 10px;
-
-}
-
-.button_clear:hover {
-    background-color: #a2cd5a; /* Cor de fundo do botão */
-    color: #000; /* Cor do texto do botão */
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
+.button_add,
+.button_clear,
 .button_save {
     background-color: #baed68; /* Cor de fundo do botão */
     color: #000; /* Cor do texto do botão */
@@ -101,8 +71,12 @@ input[type="text"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 2px;
+    margin-bottom: 10px;
 }
 
+.button_add:hover,
+.button_clear:hover,
 .button_save:hover {
     background-color: #a2cd5a; /* Cor de fundo do botão */
     color: #000; /* Cor do texto do botão */
@@ -112,7 +86,7 @@ input[type="text"] {
     cursor: pointer;
 }
 
-img {    
-    border: 2px solid #696969;    
+.signature_img {    
+    border: 2px solid #888686;    
 }
 
