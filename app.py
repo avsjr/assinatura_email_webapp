@@ -21,8 +21,8 @@ def add_text():
     mobile = request.form['mobile']
     
     # Definir constantes e opções
-    IMG_ML = 'img/01-masterline.png'
-    IMG_PL = 'img/02-platina.png'
+    IMG_ML = 'static/img/01-masterline.png'
+    IMG_PL = 'static/img/02-platina.png'
     opcoes = {
         'Platina': IMG_PL,
         'Masterline': IMG_ML
@@ -70,9 +70,11 @@ def add_text():
     
     return render_template('index.html', temp_image=temp_image_path)
 
-@app.route('/clear', methods=['POST'])
-def clear():
+@app.route('/clear_fields', methods=['POST'])
+def clear_fields():
+    # Lógica para limpar os campos aqui, se necessário
     return render_template('index.html')
+
 
 @app.route('/save_image', methods=['POST'])
 def save_image():

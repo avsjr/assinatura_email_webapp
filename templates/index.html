@@ -8,31 +8,40 @@
 
 </head>
 <body>
-        
+    <div class="header">
+        <img class='logo_img' src="/static/img/logo-skala.png" alt="Logo">
+        <h1 class='logo_text'>Crie sua Assinatura de e-mail</h1>
+    </div>        
     <div class="container">
-            <img class='logo_img' src="/static/img/logo-skala.png" alt="Logo">
-            <h1 class='logo_text'>Crie sua Aasinatura de e-mail</h1>
+    
     <form class='add_text' method="POST" action="/add_text">
         <select id="unitSelect" name="option">
             <option value="" disabled selected>Escolha sua unidade</option>
-            <option value="Platina">Platina</option>
+            <option value="Platina">Platina CSC</option>
+            <option value="Platina">Platina LOG</option>
             <option value="Masterline">Masterline</option>
         </select><br><br>    
-        <label for="name">Nome:</label>
+        <label for="name">Nome completo:</label>
         <input type="text" name="name"><br>
+
         <label for="position">Cargo:</label>
         <input type="text" name="position"><br>
-        <label for="email">Email:</label>
-        <input type="text" name="email"><br>
-        <label for="phone">Telefone Fixo:</label>
-        <input type="text" name="phone"><br>
-        <label for="mobile">Telefone Móvel (opcional):</label>
-        <input type="text" name="mobile"><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="text" name="email" id="email_input"><br>
+
+        <label for="phone">Telefone 01:</label>
+        <input type="text" name="phone" id="phoneInput" oninput="applyPhoneNumberMask(this)"><br>
+
+        <label for="mobile">Telefone 02 (opcional):</label>
+        <input type="text" name="mobile" id="mobileInput"><br><br>
+
         <input class='button_add' type="submit" value="Criar Assinatura">    
-    </form>
-    <form class='limpar_campos' method="POST" action="/clear">
+    <form class='clear_fields' method="POST" action="/clear_fields">
         <input class='button_clear' type="submit" value="Limpar Campos">
-    </form>    
+    </form>
+    </form>
+           
     <img id="signatureImage" src="static/img/03-branco.png" alt="Assinatura" width="590">
     
     <form class='salvar_imagem' method="POST" action="/save_image">

@@ -1,41 +1,52 @@
 /* Defina um estilo para o corpo da página */
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Tahoma, sans-serif;
     background-color: #f0f0f0; /* Cor de fundo da página */
     text-align: center; /* Centralize o texto na página */
     padding: 10px;
     margin: 0;
 }
 
-
-
-
-.logo_text {
-    color: #333; /* Cor do título */
-    font-size: 15px; /* Tamanho da fonte do título */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin-top: 2px;
-    margin-bottom: 20px;
-    max-height: 20px;
-    text-align: center;
-}
-
-.logo_img {
-    max-width: 130px; /* Defina a largura desejada para a imagem */
-    justify-content: left;
-}
-
-/* Estilos para o contêiner principal */
-.container {
-    background-image: url('img/bg-secao01.jpg');
-    /*background-color: #fff;*/
+.header {
+    background-color: #fff;
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0 auto;
     max-width: 700px;
-    /* Outros estilos de posicionamento e tamanho conforme necessário */
+    display: flex; /* Cria um layout flexível */
+    align-items: center; /* Centraliza verticalmente os elementos filhos */
 }
+
+.logo_text {
+    color: #333; /* Cor do título */
+    font-size: 15px; /* Tamanho da fonte do título */
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.logo_img {
+    max-width: 140px; /* Defina a largura desejada para a imagem */
+    margin-right: 70px; /* Margem à direita para separar da imagem */
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    /*background-image: url('img/bg-secao01.jpg');*/
+    background-color: #fff;
+    /*box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0 auto;
+    max-width: 700px;
+    
+}
+
+
 
 /* Estilo para o formulário */
 .add_text {
@@ -86,7 +97,7 @@ input[type="text"] {
     cursor: pointer;
 }
 
-.signature_img {    
+#signatureImage {    
     border: 2px solid #888686;    
 }
 
