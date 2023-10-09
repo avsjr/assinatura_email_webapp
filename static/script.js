@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     let unitSelect = document.getElementById("unitSelect");
     let signatureImage = document.getElementById("signatureImage");
-    let phoneInput = document.getElementById("phoneInput");
 
     unitSelect.addEventListener("change", function () {
         const selectedUnit = unitSelect.value;
 
-        if (selectedUnit === "Platina") {
+        if (selectedUnit === "Platina_csc") {
+            signatureImage.src = "static/img/02-platina.png";
+            email_input.value = "@platinacsc.com.br";
+        } else if (selectedUnit === "Platina_log") {
             signatureImage.src = "static/img/02-platina.png";
             email_input.value = "@platinacsc.com.br";
         } else if (selectedUnit === "Masterline") {
@@ -15,28 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    phoneInput.addEventListener("input", function () {
-        formatPhoneNumber(this);
+});
+
+$(document).ready(function() {
+    $("#phoneInput").inputmask({
+      mask: ["(99) 9999 9999", "(99) 9 9999 9999"],
+      keepStatic: true
     });
-});
-
-const applyPhoneNumberMask = (input) => {
-    let phoneNumber = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
-
-    if (phoneNumber.length == 11) {
-        phoneNumber = `+55 (${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 7)}-${phoneNumber.slice(7, 11)}`;
-    } else if (phoneNumber.length == 10) {
-        phoneNumber = `+55 (${phoneNumber.slice(0, 2)}) ${phoneNumber.slice(2, 6)}-${phoneNumber.slice(6, 10)}`;
-    }
-
-    input.value = phoneNumber;
-};
-
-phoneInput.addEventListener("input", function () {
-    applyPhoneNumberMask(this);
-});
-
-
-
-
-
+  
+    $("#phone02Input").inputmask({
+      mask: ["(99) 9999 9999", "(99) 9 9999 9999"],
+      keepStatic: true
+    });
+  });

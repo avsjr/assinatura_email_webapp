@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Assinaturas de E-mail</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </head>
@@ -17,8 +19,8 @@
     <form class='add_text' method="POST" action="/add_text">
         <select id="unitSelect" name="option">
             <option value="" disabled selected>Escolha sua unidade</option>
-            <option value="Platina">Platina CSC</option>
-            <option value="Platina">Platina LOG</option>
+            <option value="Platina_csc">Platina CSC</option>
+            <option value="Platina_log">Platina LOG</option>
             <option value="Masterline">Masterline</option>
         </select><br><br>    
         <label for="name">Nome completo:</label>
@@ -30,19 +32,21 @@
         <label for="email">E-mail:</label>
         <input type="text" name="email" id="email_input"><br>
 
-        <label for="phone">Telefone 01:</label>
-        <input type="text" name="phone" id="phoneInput" oninput="applyPhoneNumberMask(this)"><br>
+        <label for="phone">Telefone:</label>
+        <input type="text" name="phone" id="phoneInput" maxlength="16" />
 
-        <label for="mobile">Telefone 02 (opcional):</label>
-        <input type="text" name="mobile" id="mobileInput"><br><br>
+        <label for="mobile">Telefone(opcional):</label>
+        <input type="text" name="phone02" id="phone02Input" maxlength="16" />
 
         <input class='button_add' type="submit" value="Criar Assinatura">    
     <form class='clear_fields' method="POST" action="/clear_fields">
         <input class='button_clear' type="submit" value="Limpar Campos">
     </form>
     </form>
-           
-    <img id="signatureImage" src="static/img/03-branco.png" alt="Assinatura" width="590">
+
+    <img id="signatureImage" src="data:image/png;base64, {{ img_base64 }}" alt="Assinatura com texto adicionado" width="590">
+       
+    <!--<img id="defaultImage" src="/static/img/03-branco.png" alt="defaultImage" width="590">-->
     
     <form class='salvar_imagem' method="POST" action="/save_image">
         <input class='button_save' type="submit" value="Salvar Assinatura">
