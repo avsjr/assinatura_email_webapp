@@ -9,7 +9,13 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 
 @app.route('/')
 def index():
-    img_base64 = 'static/img/03-branco.png'
+    with open("static/img/03-branco.png", "rb") as image_file:
+        # Lê os dados binários da imagem
+        image_data = image_file.read()
+
+        # Codifica a imagem em base64
+        img_base64 = base64.b64encode(image_data).decode('utf-8')
+        
     # Renderizar a página inicial com a imagem padrão
     return render_template('index.html', img_base64=img_base64)
 
