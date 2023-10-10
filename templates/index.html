@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Assinaturas de E-mail</title>
+    <link rel="icon" href="/static/img/skala.ico" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
@@ -11,13 +12,15 @@
 </head>
 <body>
     <div class="header">
-        <img class='logo_img' src="/static/img/logo-skala.png" alt="Logo">
+        <a href="{{ url_for('index') }}">
+            <img class='logo_img' src="/static/img/logo-skala.png" alt="Logo">
+        </a>
         <h1 class='logo_text'>Crie sua Assinatura de e-mail</h1>
     </div>        
     <div class="container">
     
     <form class='add_text' method="POST" action="/add_text">
-        <select id="unitSelect" name="option">
+        <select name="option" id="unitSelect">
             <option value="" disabled selected>Escolha sua unidade</option>
             <option value="Platina_csc">Platina CSC</option>
             <option value="Platina_log">Platina LOG</option>
@@ -33,24 +36,26 @@
         <input type="text" name="email" id="email_input"><br>
 
         <label for="phone">Telefone:</label>
-        <input type="text" name="phone" id="phoneInput" maxlength="16" />
+        <input type="text" name="phone" id="phoneInput" maxlength="19" />
 
         <label for="mobile">Telefone(opcional):</label>
         <input type="text" name="phone02" id="phone02Input" maxlength="16" />
 
-        <input class='button_add' type="submit" value="Criar Assinatura">    
-    <form class='clear_fields' method="POST" action="/clear_fields">
-        <input class='button_clear' type="submit" value="Limpar Campos">
-    </form>
-    </form>
-
-    <img id="signatureImage" src="data:image/png;base64, {{ img_base64 }}" alt="Assinatura com texto adicionado" width="590">
+        <input class='button_add' type="submit" value="Criar Assinatura">
        
-    <!--<img id="defaultImage" src="/static/img/03-branco.png" alt="defaultImage" width="590">-->
-    
-    <form class='salvar_imagem' method="POST" action="/save_image">
-        <input class='button_save' type="submit" value="Salvar Assinatura">
     </form>
+    <div>
+    <img id="signatureImage" src="data:image/png;base64, {{ img_base64 }}" alt="assinatura" width="590">
+    </div>       
+    <!--<img id="defaultImage" src="/static/img/03-branco.png" alt="defaultImage" width="590">-->
+    <button class='button_save' type="submit" formaction="/save_image" formmethod="POST">
+        <a href="{{ url_for('uploaded_file', filename='assinatura.png') }}" download="assinatura.png">Salvar Assinatura</a>
+    </button>
+    
+    <!--<div class='button_save' type="submit" method="POST" action="/save_image">
+        <a href="{{ url_for('uploaded_file', filename='assinatura.png') }}" download="assinatura.png">Salvar Assinatura</a>
+    </div>-->
+    
     </div>
 </body>
 </html>

@@ -1,19 +1,23 @@
-from flask import Flask, render_template, request, redirect, url_for, send_file
+from flask import Flask, render_template, request, redirect, url_for, send_file, send_from_directory
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 import os
 import io
 import base64
 
 app = Flask(__name__, static_url_path='/static')
-app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = 'uploads'
 
 @app.route('/')
 def index():
+    img_base64 = 'static/img/03-branco.png'
     # Renderizar a página inicial com a imagem padrão
-    return render_template('index.html')
+    return render_template('index.html', img_base64=img_base64)
 
-@app.route('/add_text', methods=['POST'])
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
+
+@app.route('/add_text', methods=['GET', 'POST'])
 def add_text():
     # Receber os dados do formulário
     option = request.form['option']
@@ -45,9 +49,14 @@ def add_text():
     texto_email = email
     texto_telefone_fixo = phone
     texto_telefone_movel = phone02
+    endereco_platina_csc = 'Comercial Ilhas do Sol\nRua Coronel Antonio Rios, 1097 - Salas 201 a 208\nUberaba/MG'
+    endereco_platina_log = 'Platina Logística\nRua Francisco Podboy, 1551 - Distrito Ind I\nUberaba/MG'
+    endereco_masterline = 'Rua Verissímo, 265\nSão Benedito - Uberaba/MG\nCEP: 38020-310'
     
     tamanho_fonte = 15
     fonte_atributos = ImageFont.truetype('fonts/josefins/JosefinSans-Regular.ttf', tamanho_fonte)
+    fonte_endereco = ImageFont.truetype('fonts/josefins/JosefinSans-Regular.ttf', tamanho_fonte)
+    cor_endereco = (3, 3, 3)
     
     if caminho_imagem == IMG_ML:
         posicao_nome = (210, 18)
@@ -55,12 +64,26 @@ def add_text():
         posicao_email = (210, 58)
         posicao_telefone_fixo = (210, 78)
         posicao_telefone_movel = (350, 78)
-    else:
+        posicao_endereco = (210, 126)
+        desenho.text(posicao_endereco, endereco_masterline, font=fonte_endereco, fill=cor_endereco)
+    
+    elif caminho_imagem == IMG_PL and option == 'Platina_csc':
         posicao_nome = (192, 18)
         posicao_cargo = (192, 38)
         posicao_email = (192, 58)
         posicao_telefone_fixo = (192, 78)
         posicao_telefone_movel = (330, 78)
+        posicao_endereco = (192, 126)
+        desenho.text(posicao_endereco, endereco_platina_csc, font=fonte_endereco, fill=cor_endereco)
+    
+    elif caminho_imagem == IMG_PL and option == 'Platina_log':
+        posicao_nome = (192, 18)
+        posicao_cargo = (192, 38)
+        posicao_email = (192, 58)
+        posicao_telefone_fixo = (192, 78)
+        posicao_telefone_movel = (330, 78)
+        posicao_endereco = (192, 126)
+        desenho.text(posicao_endereco, endereco_platina_log, font=fonte_endereco, fill=cor_endereco)
     
     # Adicionar texto à imagem
     desenho.text(posicao_nome, texto_nome, font=fonte_atributos, fill=(162, 205, 90))
@@ -73,33 +96,12 @@ def add_text():
     buffered = io.BytesIO()
     imagem.save(buffered, format="PNG")
     img_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
-    
+
+    # Salvar a imagem temporariamente na pasta "uploads"
+    imagem.save('uploads/assinatura.png', format='PNG')
+
     # Retorne a imagem modificada codificada em base64
     return render_template('index.html', img_base64=img_base64)
-
-@app.route('/clear_fields', methods=['POST'])
-def clear_fields():
-    # Lógica para limpar os campos aqui, se necessário
-    return render_template('index.html')
-
-
-@app.route('/save_image', methods=['POST'])
-def save_image():
-    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp_image.png')
-    
-    if os.path.exists(temp_image_path):
-        # Excluir a imagem temporária após salvá-la
-        os.remove(temp_image_path)
-    
-    return redirect(url_for('index'))
-
-@app.route('/image')
-def get_image():
-    temp_image_path = os.path.join(app.config['UPLOAD_FOLDER'], 'temp_image.png')
-    if os.path.exists(temp_image_path):
-        return send_file(temp_image_path)
-    else:
-        return "Imagem não encontrada"
 
 if __name__ == '__main__':
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)

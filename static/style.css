@@ -72,30 +72,37 @@ input[type="text"] {
 }
 
 .button_add,
-.button_clear,
 .button_save {
     background-color: #baed68; /* Cor de fundo do botão */
     color: #000; /* Cor do texto do botão */
-    padding: 5px 10px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 2px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;   
+    font-size: 13px; /* Tamanho da fonte do título */
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
 .button_add:hover,
-.button_clear:hover,
 .button_save:hover {
     background-color: #a2cd5a; /* Cor de fundo do botão */
     color: #000; /* Cor do texto do botão */
-    padding: 5px 10px;
+    padding: 5px 5px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer;    
+    font-size: 13px; /* Tamanho da fonte do título */
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+.button_save a {
+    color: inherit; /* Herda a cor do texto do elemento pai */
+    text-decoration: none; /* Remove a decoração de link (sublinhado) */
 }
 
 #signatureImage {    
-    border: 2px solid #888686;    
+    border: 2px solid #baed68;    
 }
 

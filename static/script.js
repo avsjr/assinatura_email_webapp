@@ -21,12 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 $(document).ready(function() {
     $("#phoneInput").inputmask({
-      mask: ["(99) 9999 9999", "(99) 9 9999 9999"],
+      mask: ["+55 99 9999 9999", "+55 99 9 9999 9999"],
       keepStatic: true
     });
   
     $("#phone02Input").inputmask({
-      mask: ["(99) 9999 9999", "(99) 9 9999 9999"],
+      mask: ["99 9999 9999", "99 9 9999 9999"],
       keepStatic: true
     });
   });
