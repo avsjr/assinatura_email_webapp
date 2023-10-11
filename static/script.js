@@ -26,7 +26,7 @@ $(document).ready(function() {
     });
   
     $("#phone02Input").inputmask({
-      mask: ["99 9999 9999", "99 9 9999 9999"],
+      mask: [" 99 9999 9999", " 99 9 9999 9999"],
       keepStatic: true
     });
   });
