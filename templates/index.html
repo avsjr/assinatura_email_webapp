@@ -11,14 +11,14 @@
 
 </head>
 <body>
-    <div class="header">
+    <div class="main_container">
+    <div class="header_container">
         <a href="{{ url_for('index') }}">
             <img class='logo_img' src="/static/img/logo-skala.png" alt="Logo">
         </a>
         <h1 class='logo_text'>Crie sua Assinatura de e-mail</h1>
     </div>        
-    <div class="container">
-    
+    <div class="rigth_container">
     <form class='add_text' method="POST" action="/add_text">
         <select name="option" id="unitSelect">
             <option value="" disabled selected>Escolha sua unidade</option>
@@ -46,16 +46,25 @@
     </form>
     <div>
     <img id="signatureImage" src="data:image/png;base64, {{ img_base64 }}" alt="assinatura" width="590">
-    </div>       
-    <!--<img id="defaultImage" src="/static/img/03-branco.png" alt="defaultImage" width="590">-->
+    </div>          
     <button class='button_save' type="submit" formaction="/save_image" formmethod="POST">
         <a href="{{ url_for('uploaded_file', filename='assinatura.png') }}" download="assinatura.png">Salvar Assinatura</a>
     </button>
-    
-    <!--<div class='button_save' type="submit" method="POST" action="/save_image">
-        <a href="{{ url_for('uploaded_file', filename='assinatura.png') }}" download="assinatura.png">Salvar Assinatura</a>
-    </div>-->
-    
+    </div>
+    <div class="left-container">
+        <img class='img_instrucoes' src="/static/img/mulher-notebook.png" alt="Logo">
+        <h1 class='instrucoes_text'>Siga as instruções abaixo para criar sua assinatura corretamente.</h1>
+        <p class='menu_text'>
+            1º Clique no "Menu" e escolha sua unidade.<br><br>
+            2º "Nome" escreva seu nome completo.<br><br>
+            3º "Cargo" escreva seu cargo completo.<br><br>
+            4º "E-mail" escreva seu e-mail corporativo.<br><br>
+            5º "Telefone" escreva seu número de telefone corporativo incluindo o DDD.<br><br>
+            6º Caso possua mais de um telefone corporativo, o mesmo pode ser incluído no segundo campo "Telefone"<br><br>
+            7º Clique no botão "Criar Assinatura" e confira se as informações estão corretas na imagem que aparece.<br><br>
+            8º Caso esteja tudo certo clique no botão "Salvar Assinatura" para baixar a imagem.<br><br>
+        </p>
+    </div>
     </div>
 </body>
 </html>
