@@ -19,6 +19,10 @@ def index():
     # Renderizar a página inicial com a imagem padrão
     return render_template('index.html', img_base64=img_base64)
 
+@app.route('/tutorial_zimbra')
+def tutorial_zimbra():
+    return render_template('tutorial_zimbra.html')
+
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
