@@ -8,32 +8,15 @@ body {
 }
 
 /* Estilos para o contêiner principal */
-.main_container{
-    float: center;
-    width: 100%;
-}
-
-.main_container_tutorial {
-    float: center;
-    width: 80%;
+.main_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas com a primeira ocupando o espaço restante */
+    grid-template-rows: auto; /* Define o tamanho das linhas automaticamente */
 }
 
 .header_container {
-    float: right;
-    width: 55%;
-    height: 70px;
-    background-color: #fff;
-    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
-    margin-bottom: 5px;   
-}
-
-.header_container_tutorial {
-    float: center;
-    width: 600%;
-    height: 65px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
-    margin-bottom: 5px;   
+    grid-column: 1 / span 3; /* Este elemento abrange todas as três colunas */
+    background-color: #dfdbdb; /* Cor de fundo para o container à esquerda */
 }
 
 .logo_text {
@@ -44,82 +27,52 @@ body {
     margin-right: 190px;
 }
 
-.logo_text_tutorial {
-    float: center;
-    color: #333; 
-    font-size: 17px; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 20px;
-    
-}
-
 .logo_img {
     float: left;
     max-width: 150px;
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 40px;
 }
 
-.logo_img_tutorial {
-    float: left;
-    max-width: 150px;
-    margin-top: 10px;
-    margin-left: 10px;
+.left_container {
+    background-color: #f2f2f2; /* Cor de fundo para o container à esquerda */
+    padding: 10px; /* Preenchimento interno para espaçamento interno */
+    border: 1px solid #ccc; /* Borda para separação */
+    
 }
 
-.rigth_container {
-    float: left;
-    width: 55%;
-    background-color: #fff;
-    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    /*background-image: url('img/bg-secao01.jpg');*/ /* imagem de fundo */
-    /*background-size: cover; */ /* imagem de fundo */
-    /*background-repeat: no-repeat; */ /* imagem de fundo */
-    /*background-attachment: fixed; */ /* imagem de fundo */
-}
-
-.left-container{
-    float: left;
-    width: 25%; /* A largura desejada para o container à esquerda */
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(20, 20, 20, 0.2); /* Sombra suave */
-    margin-right: 5px;
-    margin-top: 5px;
+.right_container {
+    background-color: #e2e2e2; /* Cor de fundo para o container à direita */
+    padding: 10px; /* Preenchimento interno para espaçamento interno */
+    border: 1px solid #ccc; /* Borda para separação */
+    
 }
 
 .img_instrucoes {
     max-width: 150px;
 }
 
-.instrucoes_text {
+.text_instrucoes {
     color: inherit; /* Herda a cor do texto do elemento pai */
     text-decoration: none; /* Remove a decoração de link (sublinhado) */
     font-size: 14px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.menu_text1 {
-    margin-right: 5px;
-    margin-left: 10px;
+.text1_menu {
     text-align: left;
     color: #000000; 
     font-size: 12px; 
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-.menu_text2 {
-    margin-right: 5px;
-    margin-left: 10px;
+.text2_menu {
     text-align: center;
     color: #000000; 
     font-size: 13px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     
-}
-
-.body_container {
-    float: right;
-    width: 60%;
 }
 
 /* Estilo para o formulário */
