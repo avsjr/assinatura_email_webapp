@@ -1,8 +1,8 @@
 /* Defina um estilo para o corpo da página */
 body {
     font-family: Verdana, Tahoma, sans-serif;
-    background-color: #fff; /* Cor de fundo da página */
-    text-align: center; /* Centralize o texto na página */
+    background-color: #fff; 
+    text-align: center; 
     padding: 10px;
     margin: 0;
 }
@@ -11,11 +11,15 @@ body {
     display: grid;
     grid-template-columns: auto 1fr; /* Define duas colunas com a primeira ocupando o espaço restante */
     grid-template-rows: auto; /* Define o tamanho das linhas automaticamente */
+    max-width: 1000px; /* Defina a largura máxima desejada */
+    margin: 0 auto; /* Centralize horizontalmente */
+    border: 1px solid #ccc; /* Borda para separação */
 }
 
 .header_container {
     grid-column: 1 / span 2; /* Este elemento abrange todas as três colunas */
-    background-color: #dfdbdb; /* Cor de fundo para o container à esquerda */
+    background-color: #f2f2f2; /* Cor de fundo para o container à esquerda */
+    border-bottom: 1px solid #ccc;
 }
 
 .logo_text {
@@ -37,48 +41,32 @@ body {
 .left_container {
     background-color: #f2f2f2; /* Cor de fundo para o container à esquerda */
     padding: 10px; /* Preenchimento interno para espaçamento interno */
-    border: 1px solid #ccc; /* Borda para separação */
+    border-right: 1px solid #ccc;
 }
 
 .right_container {
-    background-color: #e2e2e2; /* Cor de fundo para o container à direita */
-    padding: 10px; /* Preenchimento interno para espaçamento interno */
-    border: 1px solid #ccc; /* Borda para separação */  
+    background-color: #f2f2f2; 
+    padding: 10px;
+    max-width: 120%; 
 }
 
 .img_instrucoes {
-    max-width: 150px;
+    max-width: 130px;
 }
 
 .text_instrucoes {
-
     color: inherit; /* Herda a cor do texto do elemento pai */
     text-decoration: none; /* Remove a decoração de link (sublinhado) */
     font-size: 14px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.text1_menu {
-
+.text_menu {
     text-align: left;
     color: #000000; 
     font-size: 12px; 
     font-family: Verdana, Tahoma, sans-serif;
 }
-
-.text2_menu {
-    text-align: center;
-    color: #000000; 
-    font-size: 13px; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
-}
-
-.body_container {
-    float: right;
-    width: 60%;
-}
-
 /* Estilo para o formulário */
 .add_text {
     padding: 10px;
@@ -102,6 +90,28 @@ input[type="text"] {
     margin: 3px 0;
     border: 1px solid #ccc; /* Borda fina cinza */
     border-radius: 5px;
+}
+
+/* Estilos para o menu suspenso */
+#unitSelect {
+    width: 180px; /* Largura desejada para o menu suspenso */
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Estilos para as opções do menu suspenso */
+#unitSelect option {
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Estilizar a seta do menu suspenso */
+#unitSelect::-ms-expand {
+    display: none; /* Oculta a seta no Internet Explorer */
 }
 
 .button_add,
