@@ -8,7 +8,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://rawgit.com/RobinHerbots/jquery.inputmask/3.x/dist/jquery.inputmask.bundle.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-
 </head>
 <body>
     <div class="main_container">
@@ -29,18 +28,13 @@
             5º "Telefone" escreva seu número de telefone corporativo incluindo o DDD.<br><br>
             6º Caso possua mais de um telefone corporativo, o mesmo pode ser incluído no segundo campo "Telefone"<br><br>
             7º Clique no botão "Criar Assinatura" e confira se as informações estão corretas na imagem que aparece.<br><br>
-            8º Caso esteja tudo certo clique no botão "Salvar Assinatura" para baixar a imagem.<br><br>
-            
+            8º Caso esteja tudo certo clique no botão "Salvar Assinatura" para baixar a imagem.<br><br> 
         </p>
         <h1 class='text2_menu'>
             <a href="{{ url_for('tutorial_zimbra') }}">Clique aqui para ver como adicionar sua assinatura no Zimbra.</a>
         </h1>
     </div>        
-<<<<<<< HEAD
     <div class="right_container">
-=======
-    <div class="rigth_container">
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
     <form class='add_text' method="POST" action="/add_text">
         <select name="option" id="unitSelect">
             <option value="" disabled selected>Escolha sua unidade</option>
@@ -63,8 +57,7 @@
         <label for="mobile">Telefone(opcional):</label>
         <input type="text" name="phone02" id="phone02Input" maxlength="16" />
 
-        <input class='button_add' type="submit" value="Criar Assinatura">
-       
+        <input class='button_add' type="submit" value="Criar Assinatura"> 
     </form>
     <div>
     <img id="signatureImage" src="data:image/png;base64, {{ img_base64 }}" alt="assinatura" width="590">
@@ -72,30 +65,7 @@
     <button class='button_save' type="submit" formaction="/save_image" formmethod="POST">
         <a href="{{ url_for('uploaded_file', filename='assinatura.png') }}" download="assinatura.png">Salvar Assinatura</a>
     </button>
-    </div>
-<<<<<<< HEAD
-    
-=======
-    <div class="left-container">
-        <img class='img_instrucoes' src="/static/img/mulher-notebook.png" alt="Logo">
-        <h1 class='instrucoes_text'>Siga as instruções abaixo para criar sua assinatura corretamente.</h1>
-        <p class='menu_text1'>
-            1º Clique no "Menu" e escolha sua unidade.<br><br>
-            2º "Nome" escreva seu nome completo.<br><br>
-            3º "Cargo" escreva seu cargo completo.<br><br>
-            4º "E-mail" escreva seu e-mail corporativo.<br><br>
-            5º "Telefone" escreva seu número de telefone corporativo incluindo o DDD.<br><br>
-            6º Caso possua mais de um telefone corporativo, o mesmo pode ser incluído no segundo campo "Telefone"<br><br>
-            7º Clique no botão "Criar Assinatura" e confira se as informações estão corretas na imagem que aparece.<br><br>
-            8º Caso esteja tudo certo clique no botão "Salvar Assinatura" para baixar a imagem.<br><br>
-            
-        </p>
-        <h1 class='menu_text2'>
-            <a href="{{ url_for('tutorial_zimbra') }}">Clique aqui para ver como adicionar sua assinatura no Zimbra.</a>
-        </h1>
-    </div>
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
+    </div>   
     </div>
 </body>
 </html>
-    

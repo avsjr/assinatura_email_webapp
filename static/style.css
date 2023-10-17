@@ -7,45 +7,15 @@ body {
     margin: 0;
 }
 
-/* Estilos para o contêiner principal */
-<<<<<<< HEAD
 .main_container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Define duas colunas com a primeira ocupando o espaço restante */
+    grid-template-columns: auto 1fr; /* Define duas colunas com a primeira ocupando o espaço restante */
     grid-template-rows: auto; /* Define o tamanho das linhas automaticamente */
 }
 
 .header_container {
-    grid-column: 1 / span 3; /* Este elemento abrange todas as três colunas */
+    grid-column: 1 / span 2; /* Este elemento abrange todas as três colunas */
     background-color: #dfdbdb; /* Cor de fundo para o container à esquerda */
-=======
-.main_container{
-    float: center;
-    width: 100%;
-}
-
-.main_container_tutorial {
-    float: center;
-    width: 80%;
-}
-
-.header_container {
-    float: right;
-    width: 55%;
-    height: 70px;
-    background-color: #fff;
-    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
-    margin-bottom: 5px;   
-}
-
-.header_container_tutorial {
-    float: center;
-    width: 600%;
-    height: 65px;
-    background-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */ 
-    margin-bottom: 5px;   
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
 }
 
 .logo_text {
@@ -54,25 +24,12 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-top: 20px;
     margin-right: 190px;
-<<<<<<< HEAD
-=======
-}
-
-.logo_text_tutorial {
-    float: center;
-    color: #333; 
-    font-size: 17px; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 20px;
-    
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
 }
 
 .logo_img {
     float: left;
     max-width: 150px;
     margin-top: 10px;
-<<<<<<< HEAD
     margin-bottom: 10px;
     margin-left: 40px;
 }
@@ -81,81 +38,35 @@ body {
     background-color: #f2f2f2; /* Cor de fundo para o container à esquerda */
     padding: 10px; /* Preenchimento interno para espaçamento interno */
     border: 1px solid #ccc; /* Borda para separação */
-    
 }
 
 .right_container {
     background-color: #e2e2e2; /* Cor de fundo para o container à direita */
     padding: 10px; /* Preenchimento interno para espaçamento interno */
-    border: 1px solid #ccc; /* Borda para separação */
-    
-=======
-    margin-left: 40px;
-}
-
-.logo_img_tutorial {
-    float: left;
-    max-width: 150px;
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.rigth_container {
-    float: left;
-    width: 55%;
-    background-color: #fff;
-    /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    /*background-image: url('img/bg-secao01.jpg');*/ /* imagem de fundo */
-    /*background-size: cover; */ /* imagem de fundo */
-    /*background-repeat: no-repeat; */ /* imagem de fundo */
-    /*background-attachment: fixed; */ /* imagem de fundo */
-}
-
-.left-container{
-    float: left;
-    width: 25%; /* A largura desejada para o container à esquerda */
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px rgba(20, 20, 20, 0.2); /* Sombra suave */
-    margin-right: 5px;
-    margin-top: 5px;
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
+    border: 1px solid #ccc; /* Borda para separação */  
 }
 
 .img_instrucoes {
     max-width: 150px;
 }
 
-<<<<<<< HEAD
 .text_instrucoes {
-=======
-.instrucoes_text {
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
+
     color: inherit; /* Herda a cor do texto do elemento pai */
     text-decoration: none; /* Remove a decoração de link (sublinhado) */
     font-size: 14px; 
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-<<<<<<< HEAD
 .text1_menu {
-=======
-.menu_text1 {
-    margin-right: 5px;
-    margin-left: 10px;
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
+
     text-align: left;
     color: #000000; 
     font-size: 12px; 
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-<<<<<<< HEAD
 .text2_menu {
-=======
-.menu_text2 {
-    margin-right: 5px;
-    margin-left: 10px;
->>>>>>> 776ab6039358bb5d68d27554bb4806a108703146
     text-align: center;
     color: #000000; 
     font-size: 13px; 
