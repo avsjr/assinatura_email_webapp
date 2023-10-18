@@ -1,6 +1,6 @@
 /* Defina um estilo para o corpo da página */
 body {
-    font-family: Verdana, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #fff; 
     text-align: center; 
     padding: 10px;
@@ -11,63 +11,63 @@ body {
     display: grid;
     grid-template-columns: auto 1fr; /* Define duas colunas com a primeira ocupando o espaço restante */
     grid-template-rows: auto; /* Define o tamanho das linhas automaticamente */
-    max-width: 1000px; /* Defina a largura máxima desejada */
+    max-width: 1000px; 
     margin: 0 auto; /* Centralize horizontalmente */
-    border: 1px solid #ccc; /* Borda para separação */
+    border-radius: 10px;
+    border: 1px solid #777676;
 }
 
 .header_container {
     grid-column: 1 / span 2; /* Este elemento abrange todas as três colunas */
-    background-color: #f2f2f2; /* Cor de fundo para o container à esquerda */
-    border-bottom: 1px solid #ccc;
 }
 
 .logo_text {
+    margin-top: 5px;
     color: #333; 
-    font-size: 17px; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: 20px;
-    margin-right: 190px;
+    font-size: 20px; 
 }
 
 .logo_img {
-    float: left;
-    max-width: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 40px;
+    max-width: 130px;
+    margin-top: 5px;
 }
 
 .left_container {
-    background-color: #f2f2f2; /* Cor de fundo para o container à esquerda */
+    margin-left: 10px;
+    max-height: 65%;
+    border: 1px solid #777676;
+    border-radius: 10px;
     padding: 10px; /* Preenchimento interno para espaçamento interno */
-    border-right: 1px solid #ccc;
 }
 
 .right_container {
-    background-color: #f2f2f2; 
     padding: 10px;
     max-width: 120%; 
 }
 
 .img_instrucoes {
-    max-width: 130px;
+    max-width: 130px;  
 }
 
-.text_instrucoes {
-    color: inherit; /* Herda a cor do texto do elemento pai */
-    text-decoration: none; /* Remove a decoração de link (sublinhado) */
-    font-size: 14px; 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.text1_instrucoes {
+    font-size: 13px;  
+}
+
+.text2_instrucoes {
+    font-size: 13px;
 }
 
 .text_menu {
     text-align: left;
     color: #000000; 
-    font-size: 12px; 
-    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
 }
-/* Estilo para o formulário */
+
+.text_menu strong {
+    font-weight: bold; /* Torna o texto dentro de <strong> em negrito */
+}
+
 .add_text {
     padding: 10px;
     margin: 0 auto; /* Centralize o formulário horizontalmente */
@@ -79,8 +79,7 @@ label {
     display: block; /* Coloque os rótulos em uma nova linha */
     margin-top: 5px; /* Espaço superior entre os rótulos */
     font-weight: bold; 
-    font-family: Verdana, Tahoma, sans-serif; 
-    font-size: 12px;
+    font-size: 13px;
 }
 
 /* Estilo para os campos de entrada (inputs) */
@@ -116,16 +115,16 @@ input[type="text"] {
 
 .button_add,
 .button_save {
-    background-color: #baed68; /* Cor de fundo do botão */
+    background-color: #c7e28e; /* Cor de fundo do botão */
     color: #000; /* Cor do texto do botão */
     padding: 5px 5px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 5px;
-    margin-bottom: 10px;   
+    margin-bottom: 5px;  
+    font-weight: bold; 
     font-size: 13px; /* Tamanho da fonte do título */
-    font-family: Verdana, Tahoma, sans-serif;
+    
 }
 
 .button_add:hover,
@@ -133,19 +132,20 @@ input[type="text"] {
     background-color: #a2cd5a; /* Cor de fundo do botão */
     color: #000; /* Cor do texto do botão */
     padding: 5px 5px;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;    
-    font-size: 13px; /* Tamanho da fonte do título */
-    font-family: Verdana, Tahoma, sans-serif;
+    cursor: pointer;  
+    font-weight: bold;  
+    font-size: 13px; 
+    
 }
 
 .button_save a {
-    color: inherit; /* Herda a cor do texto do elemento pai */
+    color: inherit; 
     text-decoration: none; /* Remove a decoração de link (sublinhado) */
 }
 
 #signatureImage {    
-    border: 2px solid #baed68;    
+    border: 1px solid #ccc;
+    border-radius: 5px;   
 }
 
