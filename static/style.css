@@ -54,7 +54,13 @@ body {
 }
 
 .text2_instrucoes {
+    font-size: 13px;  
+}
+
+.text2_instrucoes a {
     font-size: 13px;
+    /* text-decoration: none;  */
+    color: inherit; 
 }
 
 .text_menu {

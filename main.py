@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, redirect, url_for, send_file, send_from_directory
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 import os
