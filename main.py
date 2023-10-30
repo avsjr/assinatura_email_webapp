@@ -66,6 +66,7 @@ def add_text():
     
     tamanho_fonte = 15
     fonte_atributos = ImageFont.truetype('fonts/josefins/JosefinSans-Regular.ttf', tamanho_fonte)
+    fonte_cargo = ImageFont.truetype('fonts/josefins/JosefinSans-Italic.ttf', tamanho_fonte)
     fonte_endereco = ImageFont.truetype('fonts/josefins/JosefinSans-Regular.ttf', tamanho_fonte)
     cor_endereco = (3, 3, 3)
     
@@ -98,7 +99,7 @@ def add_text():
     
     # Adicionar texto à imagem
     desenho.text(posicao_nome, texto_nome, font=fonte_atributos, fill=(162, 205, 90))
-    desenho.text(posicao_cargo, texto_cargo, font=fonte_atributos, fill=(162, 205, 90))
+    desenho.text(posicao_cargo, texto_cargo, font=fonte_cargo, fill=(162, 205, 90))
     desenho.text(posicao_email, texto_email, font=fonte_atributos, fill=(3, 3, 3))
     desenho.text(posicao_telefone_fixo, texto_telefone_fixo, font=fonte_atributos, fill=(3, 3, 3))
     desenho.text(posicao_telefone_movel, texto_telefone_movel, font=fonte_atributos, fill=(3, 3, 3))
