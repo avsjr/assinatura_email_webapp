@@ -1,52 +1,59 @@
-/* Defina um estilo para o corpo da página */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     background-color: #fff; 
     text-align: center; 
-    padding: 10px;
     margin: 0;
-}
-
-.main_container {
-    display: grid;
-    grid-template-columns: auto 1fr; /* Define duas colunas com a primeira ocupando o espaço restante */
-    grid-template-rows: auto; /* Define o tamanho das linhas automaticamente */
-    max-width: 1000px; 
-    margin: 0 auto; /* Centralize horizontalmente */
-    border-radius: 10px;
-    border: 1px solid #777676;
+    padding: 0;
 }
 
 .header_container {
-    grid-column: 1 / span 2; /* Este elemento abrange todas as três colunas */
+    /* grid-column: 1 / span 2; */
+    width: 100%;
+    background-color: #8bc34b;
+    padding: 10px;
+    font-family: Roboto, sans-serif;
+    display: flex; 
+    margin: 0;
 }
 
 .logo_text {
     margin-top: 5px;
     color: #333; 
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .logo_img {
-    max-width: 130px;
+    width: 120px;
     margin-top: 5px;
+}
+
+.main_container {
+    width: 90%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 .left_container {
     margin-left: 10px;
-    max-height: 65%;
+    margin-right: 10px;
+    width: calc(400px);
+    height: 400px;
     border: 1px solid #777676;
     border-radius: 10px;
-    padding: 10px; /* Preenchimento interno para espaçamento interno */
+    padding: 10px;
+    margin-top: 10px;
 }
 
 .right_container {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(60%);
     padding: 10px;
-    max-width: 120%; 
 }
 
 .img_instrucoes {
-    max-width: 130px;  
+    width: 130px;  
 }
 
 .text1_instrucoes {
@@ -77,7 +84,7 @@ body {
 .add_text {
     padding: 10px;
     margin: 0 auto; /* Centralize o formulário horizontalmente */
-    max-width: 500px; /* Largura máxima do formulário */
+    width: 500px; /* Largura máxima do formulário */
 }
 
 /* Estilo para os rótulos (labels) */
@@ -155,3 +162,16 @@ input[type="text"] {
     border-radius: 5px;   
 }
 
+.footer-container {
+    width: 100%;
+    background-color: #0a0a0a;
+    padding: 10px;
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    margin: 0;
+}
+
+.footer-container p {
+    color: aliceblue;
+    font-size: 12px;
+}
