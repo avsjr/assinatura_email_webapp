@@ -4,6 +4,7 @@ body {
     text-align: center; 
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .header_container {
@@ -12,17 +13,17 @@ body {
     padding: 10px;
     font-family: Roboto, sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin: 0;
 }
 
 .logo_text {
-    margin-top: 5px;
     color: #000000; 
     font-size: 20px;
-    flex-grow: 1; /* Faz com que o texto no meio ocupe o espaço disponível */
+     /*flex-grow: 1; /* Faz com que o texto no meio ocupe o espaço disponível */
     text-align: center;
+    
 }
 
 .logo_img {
@@ -31,28 +32,24 @@ body {
 }
 
 .main_container {
-    width: 100%;
     display: flex;
-    justify-content: center; 
     align-items: center;
+    justify-content: center;
 }
 
-.left_container {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 400px;
-    height: 400px;
+.instructions_container {
+    margin-right: 20px;
+    max-width: 350px;
+    max-height: 420px;
     border: 1px solid #777676;
-    border-radius: 10px;
-    padding: 10px;
-    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px; 
 }
 
-.right_container {
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 800px;
-    padding: 10px;
+.forms_container {
+    margin-left: 20px;
+    max-width: 100%;
+    padding: 10px; 
 }
 
 .img_instrucoes {
