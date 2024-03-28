@@ -68,7 +68,7 @@ def add_text():
     fonte_atributos = ImageFont.truetype('fonts/josefins/JosefinSans-Regular.ttf', tamanho_fonte)
     fonte_cargo = ImageFont.truetype('fonts/josefins/JosefinSans-Italic.ttf', tamanho_fonte)
     fonte_endereco = ImageFont.truetype('fonts/josefins/JosefinSans-Regular.ttf', tamanho_fonte)
-    cor_endereco = (3, 3, 3)
+    cor_endereco = (0, 0, 0)
     
     if caminho_imagem == IMG_ML:
         posicao_nome = (210, 18)
@@ -98,11 +98,11 @@ def add_text():
         desenho.text(posicao_endereco, endereco_platina_log, font=fonte_endereco, fill=cor_endereco)
     
     # Adicionar texto à imagem
-    desenho.text(posicao_nome, texto_nome, font=fonte_atributos, fill=(162, 205, 90))
-    desenho.text(posicao_cargo, texto_cargo, font=fonte_cargo, fill=(162, 205, 90))
-    desenho.text(posicao_email, texto_email, font=fonte_atributos, fill=(3, 3, 3))
-    desenho.text(posicao_telefone_fixo, texto_telefone_fixo, font=fonte_atributos, fill=(3, 3, 3))
-    desenho.text(posicao_telefone_movel, texto_telefone_movel, font=fonte_atributos, fill=(3, 3, 3))
+    desenho.text(posicao_nome, texto_nome, font=fonte_atributos, fill=(140, 180, 55))
+    desenho.text(posicao_cargo, texto_cargo, font=fonte_cargo, fill=(140, 180, 55))
+    desenho.text(posicao_email, texto_email, font=fonte_atributos, fill=(0, 0, 0))
+    desenho.text(posicao_telefone_fixo, texto_telefone_fixo, font=fonte_atributos, fill=(0, 0, 0))
+    desenho.text(posicao_telefone_movel, texto_telefone_movel, font=fonte_atributos, fill=(0, 0, 0))
     
     # Codificar a imagem em base64
     buffered = io.BytesIO()
