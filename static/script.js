@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (selectedUnit === "Platina_csc") {
             signatureImage.src = "static/img/02-platina.png";
-            email_input.value = "@platinacsc.com.br";
+            email_input.value = "@skala.com.br";
         } else if (selectedUnit === "Platina_log") {
             signatureImage.src = "static/img/02-platina.png";
             email_input.value = "@platinacsc.com.br";
